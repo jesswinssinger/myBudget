@@ -21,6 +21,18 @@ Simple Ruby on Rails budgeting app project
 * Add income
   * Date
   * Amount
+* Month overview
+  * Starting balance
+  * Expense breakdown by category
+    ** Click on category to see expense breakdown
+  * Ending balance
+  * Pie chart by category
+* Year overview
+  * Breakdown by month (expenses less income)
+    ** Starting balance
+    ** Ending balance
+  * Year starting balance
+  * Year ending balance
 
 ### Infrastructure
 * Database
