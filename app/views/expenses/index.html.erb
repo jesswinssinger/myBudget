@@ -1,0 +1,6 @@
+<% @expenses.each do |expense| %>
+    <h2><%= expense.item %></h2>
+    <div><%= truncate(expense.notes, :length => 35) %></div>
+    <br>
+    <%= link_to "See Expense", expense %>
+<% end %>

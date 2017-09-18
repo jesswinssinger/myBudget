@@ -1,0 +1,6 @@
+<% @incomes.each do |income| %>
+    <h2><%= income.source %></h2>
+    <div><%= truncate(income.notes, :length => 35) %></div>
+    <br>
+    <%= link_to "See Income", income %>
+<% end %>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyBudget</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <%= link_to "Home", root_path %>
+    <%= link_to "New Expense", new_expense_path %>
+    <%= link_to "New Income", new_income_path %>
+
+    <%= yield %>
+  </body>
+</html>

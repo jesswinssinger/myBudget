@@ -1,0 +1,21 @@
+<%= form_for @expense do |f| %>
+    <%= f.label :date %><br>
+    <%= f.date_select :date %><br>
+    <br>
+    <%= f.label :item %><br>
+    <%= f.text_field :item %><br>
+    <br>
+    <%= f.label :store %><br>
+    <%= f.text_field :store %><br>
+    <br>
+    <%= f.label :amount %><br>
+    <%= f.number_field :amount %><br>
+    <br>
+    <%= f.label :recurring %>
+    <%= f.check_box :recurring %><br>
+    <br>
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %><br>
+    <br>
+    <%= f.submit %>
+<% end %>

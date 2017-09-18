@@ -1,0 +1,21 @@
+<h1>My Budget</h1>
+
+<h2>
+    Income <%= number_to_currency(@total_incomes) %><br>
+    Expenses <%= number_to_currency(@total_expenses) %><br>
+    Current Balance <%= number_to_currency(@ending_balance) %><br>  
+</h2>
+
+<% @expenses.each do |expense| %>
+    <h2><%= expense.item %></h2>
+    <div><%= truncate(expense.notes, :length => 35) %></div>
+    <br>
+    <%= link_to "See Expense", expense %>
+<% end %>
+
+<% @incomes.each do |income| %>
+    <h2><%= income.source %></h2>
+    <div><%= truncate(income.notes, :length => 35) %></div>
+    <br>
+    <%= link_to "See Income", income %>
+<% end %>

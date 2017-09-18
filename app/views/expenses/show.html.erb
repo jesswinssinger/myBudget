@@ -1,0 +1,18 @@
+<h1><%= @expense.item %></h1>
+<div>
+	<%= 'Purchased on ' + String(@expense.date) %><br>
+	<%= 'At ' + @expense.store %>
+</div>
+<div>
+	<%= 'For ' + number_to_currency(@expense.amount) %>
+</div>
+<div>
+	<%= 'Recurring expense' if @expense.recurring %>
+</div>
+<div>
+	<%= 'Notes: ' + @expense.notes %>
+</div>
+<br>
+
+<%= link_to "Edit", edit_expense_path(@expense) %>
+<%= link_to "Delete", expense_path(@expense), method: :delete, data: {confirm: "Are you sure?"} %>

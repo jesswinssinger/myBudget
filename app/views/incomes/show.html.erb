@@ -1,0 +1,18 @@
+<h1><%= @income.item %></h1>
+<div>
+	<%= 'Received on ' + String(@income.date) %><br>
+	<%= 'From ' + @income.source %>
+</div>
+<div>
+	<%= 'For ' + number_to_currency(@income.amount) %>
+</div>
+<div>
+	<%= 'Recurring income' if @income.recurring %>
+</div>
+<div>
+	<%= 'Notes: ' + @income.notes %>
+</div>
+<br>
+
+<%= link_to "Edit", edit_income_path(@income) %>
+<%= link_to "Delete", income_path(@income), method: :delete, data: {confirm: "Are you sure?"} %>
