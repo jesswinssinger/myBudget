@@ -1,0 +1,7 @@
+<% @goals.each do |goal| %>
+    <h2><%= goal.goal %></h2>
+    <div><%= goal.amount %></div>
+    <div><%= truncate(goal.notes, :length => 35) %></div>
+    <br>
+    <%= link_to "See Goal", goal %>
+<% end %>

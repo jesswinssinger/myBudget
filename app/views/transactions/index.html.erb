@@ -6,16 +6,29 @@
     Current Balance <%= number_to_currency(@ending_balance) %><br>  
 </h2>
 
-<% @expenses.each do |expense| %>
-    <h2><%= expense.item %></h2>
-    <div><%= truncate(expense.notes, :length => 35) %></div>
-    <br>
-    <%= link_to "See Expense", expense %>
+<% @incomes.each do |income| %>
+    <div>
+        <%= income.date %>
+        <%= income.source %>
+        <%= income.amount %>
+        <%= truncate(income.notes, :length => 35) %>
+        <%= income.recurring %>
+    
+        <%= link_to "View", income %>
+        <%= link_to "Edit", edit_income_path(income) %>
+    </div>
 <% end %>
 
-<% @incomes.each do |income| %>
-    <h2><%= income.source %></h2>
-    <div><%= truncate(income.notes, :length => 35) %></div>
-    <br>
-    <%= link_to "See Income", income %>
+<% @expenses.each do |expense| %>
+    <div>
+        <%= expense.date %>
+        <%= expense.store %>
+        <%= expense.item %>
+        <%= expense.amount %>
+        <%= truncate(expense.notes, :length => 35) %>
+        <%= expense.recurring %>
+        
+        <%= link_to "View", expense %>
+        <%= link_to "Edit", edit_expense_path(expense) %>
+    </div>
 <% end %>

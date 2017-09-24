@@ -1,0 +1,14 @@
+<h1><%= @goal.goal %></h1>
+<div>
+	<%= 'Goal: ' + number_to_currency(@goal.amount) %>
+</div>
+<div>
+	<%= 'Progress: ' + number_to_currency(@goal.balance) %>
+</div>
+<div>
+	<%= 'Notes: ' + @goal.notes %>
+</div>
+<br>
+
+<%= link_to "Edit", edit_goal_path(@goal) %>
+<%= link_to "Delete", goal_path(@goal), method: :delete, data: {confirm: "Are you sure?"} %>

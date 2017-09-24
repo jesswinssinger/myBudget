@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170918003714) do
+ActiveRecord::Schema.define(version: 20170924231341) do
 
   create_table "expenses", force: :cascade do |t|
     t.date "date"
@@ -19,6 +19,16 @@ ActiveRecord::Schema.define(version: 20170918003714) do
     t.string "store"
     t.float "amount"
     t.boolean "recurring"
+    t.text "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+  end
+
+  create_table "goals", force: :cascade do |t|
+    t.text "goal"
+    t.integer "amount"
+    t.integer "balance"
     t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -33,6 +43,39 @@ ActiveRecord::Schema.define(version: 20170918003714) do
     t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+  end
+
+  create_table "shopping_items", force: :cascade do |t|
+    t.string "content"
+    t.integer "shopping_list_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shopping_list_id"], name: "index_shopping_items_on_shopping_list_id"
+  end
+
+  create_table "shopping_lists", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end

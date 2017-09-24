@@ -1,16 +1,16 @@
 class IncomesController < ApplicationController
-  before_action :find_post, only: [:show, :edit, :update, :destroy]
+  before_action :find_income, only: [:show, :edit, :update, :destroy]
 
   def index
     @incomes = Income.all.order("created_at DESC")
   end
 
   def new
-    @income = Income.new
+    @income = current_user.incomes.build
   end
 
   def create
-    @income = Income.new(income_params)
+    @income = current_user.incomes.build(income_params)
     if @income.save
       redirect_to @income
     else
@@ -38,7 +38,7 @@ class IncomesController < ApplicationController
 
   private
 
-  def find_post
+  def find_income
     @income = Income.find(params[:id])
   end
 

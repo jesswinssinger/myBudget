@@ -1,16 +1,16 @@
 class ExpensesController < ApplicationController
-  before_action :find_post, only: [:show, :edit, :update, :destroy]
+  before_action :find_expense, only: [:show, :edit, :update, :destroy]
 
   def index
     @expenses = Expense.all.order("created_at DESC")
   end
 
   def new
-    @expense = Expense.new
+    @expense = current_user.expenses.build
   end
 
   def create
-    @expense = Expense.new(expense_params)
+    @expense = current_user.expenses.build(expense_params)
     if @expense.save
       redirect_to @expense
     else
@@ -38,7 +38,7 @@ class ExpensesController < ApplicationController
 
   private
 
-  def find_post
+  def find_expense
     @expense = Expense.find(params[:id])
   end
 

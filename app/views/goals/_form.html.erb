@@ -1,0 +1,12 @@
+<%= form_for @goal do |f| %>
+    <%= f.label :goal %><br>
+    <%= f.text_field :goal %><br>
+    <br>
+    <%= f.label :amount %><br>
+    <%= f.number_field :amount %><br>
+    <br>
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %><br>
+    <br>
+    <%= f.submit %>
+<% end %>
