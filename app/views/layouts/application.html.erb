@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
   <head>
-    <title>MyBudget</title>
-    <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>JessBudgets</title>
+
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => "reload" %>
   </head>
 
   <body>
-    <%= link_to "Sign Up", new_user_registration_path %>
-    <%= link_to "Sign In", new_user_session_path %>
-    <%= link_to "Home", root_path %>
-    <%= link_to "New Expense", new_expense_path %>
-    <%= link_to "New Income", new_income_path %>
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <%= render 'navigation' %>
+    <%= render 'header' %>
+    <%= render 'transactions_overview' %>
+    <%= render 'goals_overview' %>
+    <%= render 'shopping_lists_overview' %>
   </body>
 
+  <%= javascript_include_tag "application", "data-turbolinks-track" => "reload" %>
 
 </html>
+
 

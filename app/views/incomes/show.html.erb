@@ -1,7 +1,7 @@
 <h1><%= @income.item %></h1>
 <div>
 	<%= 'Received on ' + String(@income.date) %><br>
-	<%= 'From ' + @income.source %>
+	<%= 'From ' + String(@income.source) %><br>
 </div>
 <div>
 	<%= 'For ' + number_to_currency(@income.amount) %>

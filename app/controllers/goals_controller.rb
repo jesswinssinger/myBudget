@@ -1,5 +1,5 @@
 class GoalsController < ApplicationController
-	before_action :find_goal, only: [:show, :edit, :update, :destroy, :addToBalance]
+	before_action :find_goal, only: [:show, :edit, :update, :destroy, :addToBalance, :complete]
 
   def index
     @goals = Goal.all.order("created_at DESC")
@@ -19,13 +19,18 @@ class GoalsController < ApplicationController
   end
 
   def show
+    params[:balance] ||= 0
   end
 
   def edit
   end
 
   def addToBalance
+  end
 
+  def complete
+    @goal.update_attribute(:completed_at, Time.now)
+    redirect_to @goal, notice: "Goal completed"
   end
 
   def update
@@ -37,7 +42,12 @@ class GoalsController < ApplicationController
   end
 
   def destroy
-    @goal.destroy
+    if @goal.destroy
+      flash[:success] = "Goal was deleted."
+    else
+      flash[:error] = "Goal could not be deleted."
+    end
+    redirect_to @index
   end
 
   private

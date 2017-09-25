@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170924231341) do
+ActiveRecord::Schema.define(version: 20170925000523) do
 
   create_table "expenses", force: :cascade do |t|
     t.date "date"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 20170924231341) do
     t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.datetime "completed_at"
   end
 
   create_table "incomes", force: :cascade do |t|
@@ -51,6 +53,7 @@ ActiveRecord::Schema.define(version: 20170924231341) do
     t.integer "shopping_list_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "completed_at"
     t.index ["shopping_list_id"], name: "index_shopping_items_on_shopping_list_id"
   end
 
@@ -59,6 +62,7 @@ ActiveRecord::Schema.define(version: 20170924231341) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,0 +1,32 @@
+<!-- Navigation -->
+<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle">
+    <i class="fa fa-bars"></i>
+</a>
+<nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+    <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle">
+        <i class="fa fa-times"></i>
+    </a>
+    <li class="sidebar-brand">
+        <a class="js-scroll-trigger" href="#top">JessBudgets</a>
+    </li>
+<% if !user_signed_in? %>
+    <li>
+    <%= link_to "Sign In", new_user_session_path %>
+    <%= link_to "Sign Up", new_user_registration_path %>
+    </li>
+<% else %>
+    <li>
+        <%= link_to "Transactions", transactions_path %>
+    </li>
+    <li>
+        <%= link_to "Goals", goals_path %>
+    </li>
+    <li>
+        <%= link_to "Shopping Lists", shopping_lists_path %>
+    </li>
+    <li>
+        <%= link_to "Log Out", destroy_user_session_path %>
+    </li>
+<% end %>
+</nav>

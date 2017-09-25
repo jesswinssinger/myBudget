@@ -1,14 +1,31 @@
-<h1><%= @goal.goal %></h1>
-<div>
-	<%= 'Goal: ' + number_to_currency(@goal.amount) %>
+<div class="row clearfix">
+    <% if @goal.completed? %>
+		<div class="complete">
+            <%= link_to "Mark as Complete", complete_goal_path(@goal), method: :patch %>
+        </div>
+        <div class="goal">
+            <p style="opacity: 0.4;">
+				<strike>
+					<%= 'Goal: ' + number_to_currency(@goal.amount) %><br>
+					<%= 'Progress: ' + number_to_currency(@goal.balance) %><br>
+					<%= 'Notes: ' + @goal.notes %><br>
+				</strike>
+			</p>
+        </div>
+        <div class = "trash">
+            <%= link_to "Delete", goal_path(@goal), method: :delete, data: {confirm: "Are you sure?" } %>
+        </div>
+    <% else %>
+        <div class="complete">
+            <%= link_to "Mark as Complete", complete_goal_path(@goal), method: :patch %>
+        </div>
+        <div class="goal">
+            <%= 'Goal: ' + number_to_currency(@goal.amount) %><br>
+			<%= 'Progress: ' + number_to_currency(@goal.balance) %><br>
+			<%= 'Notes: ' + @goal.notes %><br>
+        </div>
+        <div class = "trash">
+            <%= link_to "Delete", goal_path(@goal), method: :delete, data: {confirm: "Are you sure?" } %>
+        </div>
+    <% end %>
 </div>
-<div>
-	<%= 'Progress: ' + number_to_currency(@goal.balance) %>
-</div>
-<div>
-	<%= 'Notes: ' + @goal.notes %>
-</div>
-<br>
-
-<%= link_to "Edit", edit_goal_path(@goal) %>
-<%= link_to "Delete", goal_path(@goal), method: :delete, data: {confirm: "Are you sure?"} %>
