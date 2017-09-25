@@ -4,25 +4,28 @@
 Simple Ruby on Rails budgeting app project
 
 ## Design
-### Interface
-* Create expense categories
-  * Defaults: Home, Hygiene, Eating Out
-* Create income categories
-  * Default: Work
-    ** Set salary or hourly wage
-    ** Repeats - auto-log at a specific date
-* Add an expense
-  * Date (default today)
-  * Category
-    ** Option to add new category
-  * Item
-  * Store/Vendor
-  * Amount
-* Add income
-  * Date
-  * Amount
-* savings goal
-* shopping list
+* Landing Page
+  * Transactions
+    ** Expenses
+    ** Incomes
+    ** Actions
+      ** View Expense History
+      ** View Income History
+      ** View Transaction History
+  * Goals
+    ** Savings goals
+    ** Actions
+      ** Add New Goal
+  * Shopping Lists
+    ** Shopping Items
+    ** Actions
+      ** Add New Shopping Item
+      ** Create New Shopping List
+* Future projects
+  * Add Income and Expense Categories
+    ** Home, Eating Out, etc.
+  * Create monthly budget
+  * Implement Recurrence
 
 ### Infrastructure
 * Database
