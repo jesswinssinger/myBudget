@@ -14,7 +14,11 @@ body {
 }
 
 body {
-    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Courier', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
+    font-family: 'Courier', sans-serif;
 }
 
 .text-vertical-center {
@@ -24,7 +28,7 @@ body {
 }
 
 .text-vertical-center h1 {
-    font-size: 4.5em;
+    font-size: 5em;
     font-weight: 700;
     margin: 0;
     padding: 0;
@@ -172,97 +176,32 @@ hr.small {
 }
 
 
-/* About */
+/* Transactions */
 
-.about {
+.transactions {
     padding: 50px 0;
 }
 
-
-/* Services */
-
-.services {
-    padding: 50px 0;
-}
-
-.service-item {
+.transaction-item {
     margin-bottom: 30px;
 }
 
+/* Goals */
 
-/* Callout */
-
-.callout {
-    display: table;
-    width: 100%;
-    height: 400px;
-    color: #fff;
-    background: url(../img/callout.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-
-/* Portfolio */
-
-.portfolio {
+.goals {
     padding: 50px 0;
 }
 
-.portfolio-item {
+.goal-item {
     margin-bottom: 30px;
 }
 
-.img-portfolio {
-    margin: 0 auto;
-}
+/* Shopping Lists */
 
-.img-portfolio:hover {
-    opacity: .8;
-}
-
-
-/* Call to Action */
-
-.call-to-action {
+.shopping_lists {
     padding: 50px 0;
 }
 
-.call-to-action .btn {
-    margin: 10px;
-}
-
-
-/* Map */
-
-.map {
-    height: 500px;
-}
-
-@media(max-width:768px) {
-    .map {
-        height: 75%;
-    }
-}
-
-.map iframe {
-    pointer-events: none;
-}
-
-
-/* Footer */
-
-footer {
-    padding: 100px 0;
-}
-
-#to-top {
-    font-size: 1em;
-    position: fixed;
-    right: 5px;
-    bottom: 5px;
-    display: none;
-    padding: 15px 20px;
+.shopping-list-item {
+    margin-bottom: 30px;
 }

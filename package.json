@@ -1,5 +1,7 @@
 {
   "name": "myBudget",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "startbootstrap-stylish-portfolio": "^3.3.7"
+  }
 }

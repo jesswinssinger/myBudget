@@ -17,16 +17,25 @@
     </li>
 <% else %>
     <li>
-        <%= link_to "Transactions", transactions_path %>
+        <a class="js-scroll-trigger" href="#transactions">
+            <i class="fa fa-money" aria-hidden="true"></i>
+            Transactions
+        </a>
     </li>
     <li>
-        <%= link_to "Goals", goals_path %>
+        <a class="js-scroll-trigger" href="#goals">
+            <i class="fa fa-trophy" aria-hidden="true"></i>
+            Goals
+        </a>
     </li>
     <li>
-        <%= link_to "Shopping Lists", shopping_lists_path %>
+        <a class="js-scroll-trigger" href="#shopping_lists">
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            Shopping Lists
+        </a>
     </li>
     <li>
-        <%= link_to "Log Out", destroy_user_session_path %>
+        <%= link_to "Log Out", destroy_user_session_path, method: :delete  %>
     </li>
 <% end %>
 </nav>

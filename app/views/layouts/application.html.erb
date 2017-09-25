@@ -4,24 +4,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Simple Budgeting App designed in Ruby on Rails for CS121 Course.">
+    <meta name="author" content="Jessica Winssinger">
 
-    <title>JessBudgets</title>
-
-    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => "reload" %>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= render 'navigation' %>
-    <%= render 'header' %>
-    <%= render 'transactions_overview' %>
-    <%= render 'goals_overview' %>
-    <%= render 'shopping_lists_overview' %>
+    <%= render 'layouts/navigation' %>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
   </body>
 
-  <%= javascript_include_tag "application", "data-turbolinks-track" => "reload" %>
-
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </html>
 
 

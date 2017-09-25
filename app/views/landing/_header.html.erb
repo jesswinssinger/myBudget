@@ -1,0 +1,13 @@
+<!-- Header -->
+<header class="header" id="top">
+    <div class="text-vertical-center">
+        <h1>JessBudgets</h1>
+        <h3>Get Your Sh!t Together</h3>
+        <br>
+        <% if !user_signed_in? %>
+            <a href=<%=new_user_registration_path%> 
+               class="btn btn-dark btn-lg js-scroll-trigger">
+            Start Now!</a>
+        <% end %>
+    </div>
+</header>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :landing
   resources :incomes
   resources :expenses
   
@@ -20,6 +21,6 @@ Rails.application.routes.draw do
 
   get 'transactions', to: 'transactions#index'
 
-  root 'transactions#index'
+  root 'landing#index'
   
 end

@@ -1,0 +1,59 @@
+<!-- Transactions -->
+<section id="transactions" class="transactions bg-primary text-white">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-lg-* mx-auto">
+        <h1>My Transactions</h1>
+        <hr class="small">
+        <div class="row">
+          <div class="col-md-4 col-sm-7">
+            <div class="transaction-item">
+              <span class="fa-stack" style="font-size: 8em">
+                <i class="fa fa-circle fa-stack-2x" style="height: 24px"></i>
+                <span class="fa fa-stack-1x" style="color:black; font-size:10mm">
+                  <strong><%= number_to_currency(@total_incomes) %></strong>
+                </span>
+              </span>
+              <h3>
+                <strong>Total Income</strong>
+              </h3>
+              <a href=<%= incomes_path %> class="btn btn-light">View Income</a>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-7">
+            <div class="transaction-item">
+              <span class="fa-stack" style="font-size: 8em">
+                <i class="fa fa-circle fa-stack-2x" style="height: 24px"></i>
+                <span class="fa fa-stack-1x" style="color:black; font-size:10mm">
+                  <strong><%= number_to_currency(@ending_balance) %></strong>
+                </span>
+              </span>
+              <h2>
+                <strong>Current Balance</strong>
+              </h2>
+              <a href=<%= transactions_path %> class="btn btn-light">View Transaction Summary</a>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-7">
+            <div class="transaction-item">
+              <span class="fa-stack" style="font-size: 8em">
+                <i class="fa fa-circle fa-stack-2x" style="height: 24px"></i>
+                <span class="fa fa-stack-1x" style="color:black; font-size:10mm">
+                  <strong><%= number_to_currency(@total_expenses) %></strong>
+                </span>
+              </span>
+              <h3>
+                <strong>Total Expenses</strong>
+              </h3>
+              <a href=<%= expenses_path %> class="btn btn-light">View Expenses</a>
+            </div>
+          </div>
+        </div>
+        <!-- /.row (nested) -->
+      </div>
+      <!-- /.col-lg-10 -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>

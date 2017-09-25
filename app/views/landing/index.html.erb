@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>JessBudgets</title>
+  </head>
+
+  <body>
+    <%= render 'header' %>
+    <% if user_signed_in? %>
+      <%= render 'transactions_overview' %>
+      <%= render 'goals_overview' %>
+      <%= render 'shopping_lists_overview' %>
+    <% end %>
+  </body>
+</html>
+
+
