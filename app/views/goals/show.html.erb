@@ -7,7 +7,8 @@
             <p style="opacity: 0.4;">
 				<strike>
 					<%= 'Goal: ' + number_to_currency(@goal.amount) %><br>
-					<%= 'Progress: ' + number_to_currency(@goal.balance) %><br>
+					<%= 'Progress: ' + <td><%= goal.balance ? (number_to_currency(goal.balance)) : (number_to_currency(0)) %></td>
+ %><br>
 					<%= 'Notes: ' + @goal.notes %><br>
 				</strike>
 			</p>

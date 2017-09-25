@@ -30,7 +30,7 @@
           <% @goals.each do |goal| %>
             <tr>
                 <td><strong><%= goal.goal %></strong></td>
-                <td><%= number_to_currency(goal.amount) %></td>
+                <td><%= goal.amount != nil ? number_to_currency(goal.amount) : 0 %></td>
                 <td><%= number_to_percentage(goal.balance.to_f/goal.amount) %></td>
                 <td><%= truncate(goal.notes, :length => 35) %></td>
             
