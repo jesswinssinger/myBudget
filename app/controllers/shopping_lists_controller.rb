@@ -14,7 +14,7 @@ class ShoppingListsController < ApplicationController
 
   # GET /shopping_lists/new
   def new
-    @shopping_list = ShoppingList.new
+    @shopping_list = current_user.shopping_lists.build
   end
 
   # GET /shopping_lists/1/edit
@@ -24,12 +24,11 @@ class ShoppingListsController < ApplicationController
   # POST /shopping_lists
   # POST /shopping_lists.json
   def create
-    @shopping_list = ShoppingList.new(shopping_list_params)
+    @shopping_list = current_user.shopping_lists.build(shopping_list_params)
 
     respond_to do |format|
       if @shopping_list.save
-        format.html { redirect_to @shopping_list, notice: 'Shopping list was successfully created.' }
-        format.json { render :show, status: :created, location: @shopping_list }
+        format.html { redirect_to "#shopping_lists", notice: 'Shopping list was successfully created.' }
       else
         format.html { render :new }
         format.json { render json: @shopping_list.errors, status: :unprocessable_entity }

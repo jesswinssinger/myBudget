@@ -12,7 +12,7 @@ class GoalsController < ApplicationController
   def create
     @goal = current_user.goals.build(goal_params)
     if @goal.save
-      redirect_to @goal
+      redirect_to '#goals'
     else
       render 'new'
     end

@@ -2,6 +2,8 @@ class LandingController < ApplicationController
     def index
         @incomes = Income.all
         @expenses = Expense.all
+        @goals = Goal.all
+        @shopping_lists = ShoppingList.all
     
         @total_incomes = Income.sum(:amount)
         @total_expenses = Expense.sum(:amount)

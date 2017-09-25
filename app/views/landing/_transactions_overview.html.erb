@@ -10,7 +10,7 @@
             <div class="transaction-item">
               <span class="fa-stack" style="font-size: 8em">
                 <i class="fa fa-circle fa-stack-2x" style="height: 24px"></i>
-                <span class="fa fa-stack-1x" style="color:black; font-size:10mm">
+                <span class="fa fa-stack-1x" style="color:black; font-size:10mm; font-family: 'Courier', sans-serif;">
                   <strong><%= number_to_currency(@total_incomes) %></strong>
                 </span>
               </span>
@@ -24,13 +24,13 @@
             <div class="transaction-item">
               <span class="fa-stack" style="font-size: 8em">
                 <i class="fa fa-circle fa-stack-2x" style="height: 24px"></i>
-                <span class="fa fa-stack-1x" style="color:black; font-size:10mm">
-                  <strong><%= number_to_currency(@ending_balance) %></strong>
+                <span class="fa fa-stack-1x" style="color:black; font-size:10mm; font-family: 'Courier', sans-serif;">
+                  <strong><%= number_to_currency(@ending_balance) %><strong>
                 </span>
               </span>
-              <h2>
+              <h3>
                 <strong>Current Balance</strong>
-              </h2>
+              </h3>
               <a href=<%= transactions_path %> class="btn btn-light">View Transaction Summary</a>
             </div>
           </div>
@@ -38,14 +38,14 @@
             <div class="transaction-item">
               <span class="fa-stack" style="font-size: 8em">
                 <i class="fa fa-circle fa-stack-2x" style="height: 24px"></i>
-                <span class="fa fa-stack-1x" style="color:black; font-size:10mm">
+                <span class="fa fa-stack-1x" style="color:black; font-size:10mm; font-family: 'Courier', sans-serif;">
                   <strong><%= number_to_currency(@total_expenses) %></strong>
                 </span>
               </span>
               <h3>
                 <strong>Total Expenses</strong>
               </h3>
-              <a href=<%= expenses_path %> class="btn btn-light">View Expenses</a>
+              <a href=<%= expenses_path %> class="btn btn-light" style= font-family: 'Courier', sans-serif;>View Expenses</a>
             </div>
           </div>
         </div>

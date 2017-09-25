@@ -4,8 +4,38 @@
     <div class="row text-center">
       <div class="col-lg-* mx-auto">
         <h1>My Shopping Lists</h1>
+        <hr class="small">
+        <style>
+          table {
+              border-collapse: collapse;
+              position: relative;
+              width: 60%;
+              margin: auto;
+          }
 
+          th, td {
+              text-align: left;
+              padding: 8px;
+              font-style: bold;
+          }
+
+        </style>
+        <% @shopping_lists.each do |list| %>
+          <table style="border: 1px solid white">
+          <tr>
+            <th><%=list.title%></th>
+          </tr>
+          <% list.shopping_items.each do |item| %>
+            <tr>
+                <td><%= item.content %></td>
+                <td><%= number_to_currency(item.amount) %></td>
+            </tr>
+          <% end %>
+          </table>
+        <% end %>
       </div>
+      <br>
+      <a href=<%= new_shopping_list_path %> class="btn btn-light">New Shopping List</a>
       <!-- /.col-lg-10 -->
     </div>
     <!-- /.row -->

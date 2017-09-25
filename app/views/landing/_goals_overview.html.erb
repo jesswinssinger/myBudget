@@ -1,10 +1,48 @@
 <!-- Goals -->
-<section id="goals" class="goals bg-primary text-white">
+<section id="goals" class="goals text-white">
   <div class="container">
     <div class="row text-center">
-      <div class="col-lg-* mx-auto">
+      <div class="col-lg-* mx-auto text-black">
         <h1>My Goals</h1>
+        <hr class="small" style="border-top-color:black">
+        <style>
+          table {
+              border-collapse: collapse;
+              position: relative;
+              width: 60%;
+              margin: auto;
+          }
 
+          th, td {
+              text-align: left;
+              padding: 8px;
+              font-style: bold;
+          }
+
+        </style>
+        <table>
+          <tr>
+            <th>Goal</th>
+            <th>Amount</th>
+            <th>Balance</th>
+            <th>Notes</th>
+          </tr>
+          <% @goals.each do |goal| %>
+            <tr>
+                <td><strong><%= goal.goal %></strong></td>
+                <td><%= number_to_currency(goal.amount) %></td>
+                <td><%= number_to_percentage(goal.balance.to_f/goal.amount) %></td>
+                <td><%= truncate(goal.notes, :length => 35) %></td>
+            
+                <td><%= link_to "View", goal %></td>
+                <td><%= link_to "Add To Balance", edit_goal_path(goal) %></td>
+            </tr>
+          <% end %>
+        </table>
+      </div>
+      <div>
+      <br>
+      <%= link_to "New Goal", new_goal_path %>
       </div>
       <!-- /.col-lg-10 -->
     </div>

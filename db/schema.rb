@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170925000523) do
+ActiveRecord::Schema.define(version: 20170925080125) do
 
   create_table "expenses", force: :cascade do |t|
     t.date "date"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20170925000523) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "completed_at"
+    t.float "amount"
     t.index ["shopping_list_id"], name: "index_shopping_items_on_shopping_list_id"
   end
 
