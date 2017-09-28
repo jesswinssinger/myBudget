@@ -19,11 +19,12 @@ Landing Page
 
 
 ## Functionality
-Log Incomes and Expenses.
-
-Add Goals.
-
-Create Shopping Lists.
+Log transactions and keep up your incomes and expenses!
+![https://github.com/jesswinssinger/myBudget/blob/master/app/assets/images/Screen%20Shot%202017-09-25%20at%2002.09.14.png]
+Add Goals!
+![https://github.com/jesswinssinger/myBudget/blob/master/app/assets/images/Screen%20Shot%202017-09-25%20at%2002.09.06.png]
+Create Shopping Lists!
+(coming soon!)
 
 ## Architecture
 The architecture of this website is simple: there is a database with four tables, listed below.
