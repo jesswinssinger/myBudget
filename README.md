@@ -19,7 +19,8 @@ Landing Page
 
 
 ## Functionality
-Log transactions and keep up your incomes and expenses! Adding new transactions is easy to do from the landing page.
+The navigation, found in the top right corner, is helpful to navigate the landing page. This functionality was taken from the bootstrap template found under references in this README.
+Log transactions and keep up your incomes and expenses! Adding new transactions is easy to do from the landing page. Just view the list of the respective transaction, then click new!
 ![transactions](https://github.com/jesswinssinger/myBudget/blob/master/app/assets/images/Screen%20Shot%202017-09-25%20at%2002.09.14.png)
 Add Goals! There is a quick and easy button under the list of goals on the landing page.
 ![alt tag](https://github.com/jesswinssinger/myBudget/blob/master/app/assets/images/Screen%20Shot%202017-09-25%20at%2002.09.06.png)
