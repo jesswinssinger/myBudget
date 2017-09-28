@@ -39,8 +39,10 @@ The architecture of this website is simple: there is a database with six tables,
 
 ## Issues
 1. (Known Bug) The Shopping Lists are a new feature that has not been fully built yet.
-2. There were issues with the bootstrap due to struggles with the asset pipeline, and much of the styling ended up having to be from scratch.
-3. Figuring out how to subtype using the MVC model was tough, but after some research it was easy to figure out!
+2. (Known Bug) The add to balance feature is not functional yet.
+3. Still need to actually make the recurring option for transactions useful!
+4. There were issues with the bootstrap due to struggles with the asset pipeline, and much of the styling ended up having to be from scratch.
+5. Figuring out how to subtype using the MVC model was tough, but after some research it was easy to figure out!
 
 ## References
 * font-awesome: https://www.youtube.com/watch?v=RC_jIGABW-E
