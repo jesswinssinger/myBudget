@@ -28,15 +28,14 @@ Create Shopping Lists!
 (coming soon!)
 
 ## Architecture
-The architecture of this website is simple: there is a database with four tables, listed below.
-Database
-* Users
-* Expense Categories
-* Income Categories
-* Expenses
-* Goals
-* Shopping Lists
-* Shopping_Lists_Shopping_Items
+The architecture of this website is simple: there is a database with six tables, listed below. Whenever a transaction, goal, or shopping list is added or edited, the information is updated in its respective table. User_ids are associated with expenses, incomes, goals, and shopping lists as a column in their tables.
+
+* Users: holds information for users such as username and password. 
+* Expenses: holds date, amount, store, notes, option to make it recurring, and user_id.
+* Incomes: holds date, amount, source, notes, option to make it recurring, and user_id.
+* Goals: holds item, amount, notes, and user_id.
+* Shopping Lists: holds shopping list name, notes, and user_id.
+* Shopping_Lists_Shopping_Items: holds item, amount, and notes.
 
 ## Issues
 1. (Known Bug) The Shopping Lists are a new feature that has not been fully built yet.
