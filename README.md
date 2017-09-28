@@ -19,9 +19,9 @@ Landing Page
 
 
 ## Functionality
-Log transactions and keep up your incomes and expenses!
+Log transactions and keep up your incomes and expenses! Adding new transactions is easy to do from the landing page.
 ![transactions](https://github.com/jesswinssinger/myBudget/blob/master/app/assets/images/Screen%20Shot%202017-09-25%20at%2002.09.14.png)
-Add Goals!
+Add Goals! There is a quick and easy button under the list of goals on the landing page.
 ![alt tag](https://github.com/jesswinssinger/myBudget/blob/master/app/assets/images/Screen%20Shot%202017-09-25%20at%2002.09.06.png)
 Create Shopping Lists!
 (coming soon!)
@@ -40,8 +40,10 @@ Database
 ## Issues
 1. (Known Bug) The Shopping Lists are a new feature that has not been fully built yet.
 2. There were issues with the bootstrap due to struggles with the asset pipeline, and much of the styling ended up having to be from scratch.
+3. Figuring out how to subtype using the MVC model was tough, but after some research it was easy to figure out!
 
 ## References
 * font-awesome: https://www.youtube.com/watch?v=RC_jIGABW-E
 * Ruby on Rails Tutorials: https://www.youtube.com/user/mackenziechild
 * User Auth with devise: https://www.youtube.com/watch?v=zJYuLebl-Js&t=220s
+* a bootstrap template I took some styling from: https://startbootstrap.com/template-overviews/stylish-portfolio/
